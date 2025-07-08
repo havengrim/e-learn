@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
+import * as React from "react";
 import {
-  IconDots,
-  IconFolder,
-  IconShare3,
-  IconTrash,
-  type Icon,
-} from "@tabler/icons-react"
+  TbDots,
+  TbFolder,
+  TbShare3,
+  TbTrash,
+} from "react-icons/tb";
 
 import {
   DropdownMenu,
@@ -14,7 +14,8 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@/components/ui/dropdown-menu";
+
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -23,70 +24,77 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@/components/ui/sidebar"
+} from "@/components/ui/sidebar";
 
-export function NavDocuments({
-  items,
-}: {
-  items: {
-    name: string
-    url: string
-    icon: Icon
-  }[]
-}) {
-  const { isMobile } = useSidebar()
+interface NavDocumentsItem {
+  name: string;
+  url: string;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+}
+
+interface NavDocumentsProps {
+  items: NavDocumentsItem[];
+}
+
+const NavDocumentsComponent = ({ items }: NavDocumentsProps) => {
+  const { isMobile } = useSidebar();
 
   return (
     <SidebarGroup className="group-data-[collapsible=icon]:hidden">
       <SidebarGroupLabel>Documents</SidebarGroupLabel>
       <SidebarMenu>
-        {items.map((item) => (
-          <SidebarMenuItem key={item.name}>
+        {items.map(({ name, url, icon: Icon }) => (
+          <SidebarMenuItem key={name}>
             <SidebarMenuButton asChild>
-              <a href={item.url}>
-                <item.icon />
-                <span>{item.name}</span>
+              <a href={url} className="flex items-center gap-2">
+                <Icon className="w-5 h-5" aria-hidden="true" />
+                <span>{name}</span>
               </a>
             </SidebarMenuButton>
+
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <SidebarMenuAction
                   showOnHover
                   className="data-[state=open]:bg-accent rounded-sm"
+                  aria-label={`More actions for ${name}`}
                 >
-                  <IconDots />
-                  <span className="sr-only">More</span>
+                  <TbDots className="w-5 h-5" />
                 </SidebarMenuAction>
               </DropdownMenuTrigger>
+
               <DropdownMenuContent
                 className="w-24 rounded-lg"
                 side={isMobile ? "bottom" : "right"}
                 align={isMobile ? "end" : "start"}
               >
                 <DropdownMenuItem>
-                  <IconFolder />
+                  <TbFolder className="mr-2 w-5 h-5" />
                   <span>Open</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <IconShare3 />
+                  <TbShare3 className="mr-2 w-5 h-5" />
                   <span>Share</span>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem variant="destructive">
-                  <IconTrash />
+                  <TbTrash className="mr-2 w-5 h-5" />
                   <span>Delete</span>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </SidebarMenuItem>
         ))}
+
         <SidebarMenuItem>
-          <SidebarMenuButton className="text-sidebar-foreground/70">
-            <IconDots className="text-sidebar-foreground/70" />
+          <SidebarMenuButton className="text-sidebar-foreground/70 flex items-center gap-2">
+            <TbDots className="w-5 h-5 text-sidebar-foreground/70" aria-hidden="true" />
             <span>More</span>
           </SidebarMenuButton>
         </SidebarMenuItem>
       </SidebarMenu>
     </SidebarGroup>
-  )
-}
+  );
+};
+
+export const NavDocuments = React.memo(NavDocumentsComponent);

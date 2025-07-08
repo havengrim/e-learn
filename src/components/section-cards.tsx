@@ -3,7 +3,7 @@ export function SectionCards() {
     <div className="">
       <div className="px-6">
         <div className="mx-auto w-full">
-          <div className="relative isolate overflow-hidden bg-gray-900 px-6 pt-10 pb-12 sm:rounded-3xl sm:px-12 md:pt-14 md:pb-16 lg:flex lg:gap-x-16 lg:px-20">
+          <div className="relative isolate overflow-hidden bg-gray-900 px-6 pt-10 pb-12 rounded-3xl sm:px-12 md:pt-14 md:pb-16 lg:flex lg:gap-x-16 lg:px-20">
             {/* Background Glow SVG */}
             <svg
               viewBox="0 0 1024 1024"
@@ -31,8 +31,7 @@ export function SectionCards() {
                 Sharpen Your Skills With Professional Online Courses
               </h2>
               <p className="mt-4 text-base text-pretty text-gray-300">
-                Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla.
-              </p>
+ Learn at your own pace with expert-led modules designed to help you grow, succeed, and stay ahead in your career.              </p>
               <div className="mt-8 flex items-center justify-center gap-x-4 lg:justify-start">
                 <a
                   href="#"
@@ -47,7 +46,8 @@ export function SectionCards() {
             </div>
 
             {/* Right image */}
-            <div className="relative mt-10 h-64 lg:mt-4">
+           <div className="hidden lg:block mt-10 h-64 lg:mt-4 relative">
+
               <img
                 alt="App screenshot"
                 src="https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png"
