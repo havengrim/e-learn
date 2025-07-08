@@ -26,7 +26,7 @@ const courses = Array.from({ length: 3 }, (_, i) => ({
 const TopCourses = () => {
   return (
     <div>
-      <div className="max-w-7xl mx-auto">
+      <div>
         <h2 className="text-xl sm:text-2xl font-semibold tracking-tight text-gray-900 mb-6 sm:mb-8">
           Learners are viewing
         </h2>

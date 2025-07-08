@@ -39,7 +39,7 @@ const categories = [
 const TopCategories = () => {
   return (
     <div className="mt-4">
-      <div className="max-w-6xl mx-auto">
+      <div>
         <h2 className="text-2xl font-semibold tracking-tight text-gray-900 mb-8">Top Categories</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
