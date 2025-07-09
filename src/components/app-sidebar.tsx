@@ -36,7 +36,7 @@ const data = {
     avatar: "/avatars/shadcn.jpg",
   },
   navMain: [
-    { title: "Dashboard", url: "#", icon: TbDashboard },
+    { title: "Dashboard", url: "/dashboard", icon: TbDashboard },
     { title: "Lifecycle", url: "#", icon: TbListDetails },
     { title: "Analytics", url: "#", icon: TbChartBar },
     { title: "Projects", url: "#", icon: TbFolder },

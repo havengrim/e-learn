@@ -10,6 +10,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar"
 import { BadgeCheck, ChevronLeft, Clock, Play, Star, BookOpen, Lock, Heart } from "lucide-react"
+import Recommended from "@/components/recommended"
 
 export default function Course() {
   return (
@@ -188,6 +189,9 @@ export default function Course() {
           <div className="hidden lg:block">
             <CourseContentSidebar />
           </div>
+        </div>
+        <div className="px-4 lg:px-6 mb-8">
+          <Recommended />
         </div>
         <Footer />
       </SidebarInset>

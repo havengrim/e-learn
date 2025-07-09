@@ -14,7 +14,7 @@ const courses = Array.from({ length: 4 }, (_, i) => ({
   duration: `${faker.number.int({ min: 20, max: 60 })} hours`,
   price: `$${faker.number.int({ min: 49, max: 129 })}`,
   category: faker.commerce.department(),
-  href: "/courses/sample-course",
+  href: "/course",
   description: faker.lorem.paragraph(3),
   level: faker.helpers.arrayElement(["Beginner", "Intermediate", "Advanced"]),
   language: "English",
