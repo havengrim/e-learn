@@ -1,4 +1,4 @@
-import { GalleryVerticalEnd } from "lucide-react"
+import { GalleryVerticalEnd, ChevronLeftIcon } from "lucide-react"
 import bg from "@/assets/bg.png"
 import {
   InputOTP,
@@ -6,7 +6,6 @@ import {
   InputOTPSlot,
 } from "@/components/ui/input-otp"
 import React from "react"
-import { FaArrowLeft } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 export default function ForgotPage() {
@@ -38,8 +37,10 @@ export default function ForgotPage() {
             {/* OTP Verification Content */}
             <div className="flex flex-1 items-center justify-center">
                 <div className="w-full max-w-md space-y-4">
-                <Link to="/" className="flex justify-start">
-                    <FaArrowLeft className="h-10 w-10 p-2.5 bg-gray-100 rounded-full cursor-pointer mb-4" />
+                <Link to="/">
+                   <Button variant="secondary" size="icon" className="size-8">
+                    <ChevronLeftIcon />
+                  </Button>
                 </Link>
 
                 <h1 className="text-2xl font-bold">Verify Your Identity</h1>

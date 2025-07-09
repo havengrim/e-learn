@@ -5,13 +5,10 @@ import {
   TbChartBar,
   TbDashboard,
   TbDatabase,
-
-  TbFileWord,
   TbFolder,
   TbHelp,
   TbInnerShadowTop,
   TbListDetails,
-  TbReport,
   TbSearch,
   TbSettings,
   TbUsers,
@@ -52,8 +49,6 @@ const data = {
   ],
   documents: [
     { name: "Data Library", url: "#", icon: TbDatabase },
-    { name: "Reports", url: "#", icon: TbReport },
-    { name: "Word Assistant", url: "#", icon: TbFileWord },
   ],
 };
 
