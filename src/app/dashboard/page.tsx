@@ -1,4 +1,7 @@
 import { AppSidebar } from "@/components/app-sidebar"
+import Cta from "@/components/cta"
+import Footer from "@/components/footer"
+import { LearningSection } from "@/components/learning-section"
 import { SectionCards } from "@/components/section-cards"
 import { SiteHeader } from "@/components/site-header"
 import TopCategories from "@/components/top-categories"
@@ -7,7 +10,6 @@ import {
   SidebarInset,
   SidebarProvider,
 } from "@/components/ui/sidebar"
-
 
 
 export default function Page() {
@@ -28,6 +30,12 @@ export default function Page() {
             <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
               <SectionCards />
               <div className="px-4 lg:px-6">
+                <LearningSection />
+              </div>
+               <div className="px-4 lg:px-6">
+                <Cta />
+              </div>
+              <div className="px-4 lg:px-6">
                 <TopCategories />
               </div>
               <div className="px-4 lg:px-6">
@@ -36,7 +44,9 @@ export default function Page() {
             </div>
           </div>
         </div>
+        <Footer />
       </SidebarInset>
+      
     </SidebarProvider>
   )
 }
