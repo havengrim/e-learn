@@ -2,6 +2,7 @@ import { AppSidebar } from "@/components/app-sidebar"
 import Cta from "@/components/cta"
 import Footer from "@/components/footer"
 import { LearningSection } from "@/components/learning-section"
+import Recommended from "@/components/recommended"
 import { SectionCards } from "@/components/section-cards"
 import { SiteHeader } from "@/components/site-header"
 import TopCategories from "@/components/top-categories"
@@ -40,6 +41,9 @@ export default function Page() {
               </div>
               <div className="px-4 lg:px-6">
                 <TopCourses />
+              </div>
+               <div className="px-4 lg:px-6">
+                <Recommended />
               </div>
             </div>
           </div>

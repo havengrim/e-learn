@@ -2,7 +2,7 @@ import women from "@/assets/women.png"
 
 export function SectionCards() {
   return (
-    <div className="">
+    <div>
       <div className="px-6">
         <div className="mx-auto w-full">
           <div className="relative isolate overflow-hidden bg-gray-900 px-6 pt-10 pb-12 rounded-3xl sm:px-12 md:pt-14 md:pb-16 lg:flex lg:gap-x-16 lg:px-20 lg:relative">
@@ -12,7 +12,13 @@ export function SectionCards() {
               aria-hidden="true"
               className="absolute top-1/2 left-1/2 -z-10 size-256 -translate-y-1/2 mask-[radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
             >
-              <circle r={512} cx={512} cy={512} fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fillOpacity="0.7" />
+              <circle
+                r={512}
+                cx={512}
+                cy={512}
+                fill="url(#759c1415-0410-454c-8f7c-9a820de03641)"
+                fillOpacity="0.7"
+              />
               <defs>
                 <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
                   <stop stopColor="#7775D6" />
@@ -20,7 +26,8 @@ export function SectionCards() {
                 </radialGradient>
               </defs>
             </svg>
-            {/* Left text */}
+
+            {/* Left text content */}
             <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:text-left flex flex-col justify-center">
               <h2 className="text-2xl font-semibold tracking-tight text-balance text-white sm:text-3xl">
                 Sharpen Your Skills With Professional Online Courses
@@ -41,15 +48,16 @@ export function SectionCards() {
                 </a>
               </div>
             </div>
+
             {/* Right person image */}
-            <div className="hidden xl:block lg:flex-shrink-0 lg:absolute lg:bottom-0 lg:right-18">
+            <div className="hidden xl:block lg:flex-shrink-0 lg:absolute lg:bottom-0 right-6 lg:right-12">
               <div className="relative">
                 <img
                   alt="Professional person"
                   src={women || "/placeholder.svg"}
                   width={300}
                   height={400}
-                  className="h-80 w-auto object-cover object-top"
+                  className="h-80 lg:h-96 xl:h-[20rem] w-auto object-cover object-top"
                 />
               </div>
             </div>

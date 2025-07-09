@@ -31,7 +31,6 @@ function CourseCard({
         </div>
       </div>
 
-      {/* Content */}
       <div className="flex-1 min-w-0">
         <h3 className="font-semibold text-gray-900 text-sm mb-1 truncate">{title}</h3>
         <p className="text-xs text-gray-500 mb-3 line-clamp-2">{description}</p>
