@@ -30,7 +30,7 @@ const TopCourses = () => {
         <h2 className="text-xl sm:text-2xl font-semibold tracking-tight text-gray-900 mb-6 sm:mb-8">
           Learners are viewing
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
           {courses.map((course, index) => (
             <div key={course.id} className="relative group h-full cursor-pointer">
               <div className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-2xl hover:shadow-gray-200/50 transition-all duration-300 hover:-translate-y-2 transform h-full flex flex-col">
