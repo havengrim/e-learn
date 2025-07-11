@@ -30,6 +30,7 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar";
+import { Link } from "react-router-dom";
 
 interface User {
   name: string;
@@ -87,10 +88,12 @@ export function NavUser({ user }: { user: User }) {
             <DropdownMenuSeparator />
 
             <DropdownMenuGroup>
-              <DropdownMenuItem>
-                <TbUserCircle className="mr-2 w-4 h-4" />
-                Account
-              </DropdownMenuItem>
+              <Link to="/student-profile" >
+                <DropdownMenuItem>
+                  <TbUserCircle className="mr-2 w-4 h-4" />
+                  Account
+                </DropdownMenuItem>
+              </Link>
               <DropdownMenuItem>
                 <TbCreditCard className="mr-2 w-4 h-4" />
                 Billing
