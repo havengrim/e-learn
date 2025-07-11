@@ -1,3 +1,5 @@
+"use client"
+
 import type React from "react"
 import { AppSidebar } from "@/components/app-sidebar"
 import Footer from "@/components/footer"
@@ -11,6 +13,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar"
 import { BadgeCheck, ChevronLeft, Clock, Play, Star, BookOpen, Lock, Heart } from "lucide-react"
 import Recommended from "@/components/recommended"
+import { CustomVideoPlayer } from "@/components/custom-video-player"
 
 export default function Course() {
   return (
@@ -91,24 +94,36 @@ export default function Course() {
                   </div>
                 </div>
 
-         
+                {/* Custom Video Player Section */}
                 <div className="px-4 lg:px-6">
-                  <Card className="!p-0">
-                    <CardContent className="!p-0">
-                      <div className="relative aspect-video bg-gradient-to-br from-purple-100 to-blue-100 rounded-lg overflow-hidden">
-                        <img
-                          src="https://preview-react-component-example-kzmj8yjcnd52x6v5xen7.vusercontent.net/placeholder.svg?height=400&width=600"
-                          alt="Course preview"
-                          className="w-full h-full object-cover"
-                        />
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <Button size="lg" className="rounded-full h-12 w-12 sm:h-16 sm:w-16">
-                            <Play className="h-4 w-4 sm:h-6 sm:w-6 ml-1" />
-                          </Button>
-                        </div>
-                      </div>
+                  <Card className="overflow-hidden border-0 shadow-lg p-0">
+                    <CardContent className="p-0">
+                      <CustomVideoPlayer
+                        src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                        poster="/placeholder.svg?height=400&width=600"
+                        title="Lesson 1: Introduction to Figma"
+                        className="aspect-video"
+                      />
                     </CardContent>
                   </Card>
+
+                  {/* Video Info Bar */}
+                  <div className="mt-4 p-4 bg-white rounded-lg border">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-2">
+                          <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
+                            <Play className="h-5 w-5 text-white ml-0.5" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-sm">Introduction to Figma</h4>
+                            <p className="text-xs text-muted-foreground">Lesson 1 of 38</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="text-sm text-muted-foreground">Duration: 12:34</div>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="px-4 lg:px-6">
@@ -143,7 +158,6 @@ export default function Course() {
                             </p>
                           </div>
                         </div>
-
                         <div>
                           <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3">What You'll Learn</h3>
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
@@ -191,7 +205,10 @@ export default function Course() {
           </div>
         </div>
         <div className="px-4 lg:px-6 mb-8">
-          <Recommended />
+          <hr />
+          <div className="mt-4">
+            <Recommended />
+          </div>
         </div>
         <Footer />
       </SidebarInset>
