@@ -8,6 +8,7 @@ import ForgotPage from './app/auth/forgot';
 import './index.css';
 import Course from './app/course/[id]/Course';
 import StudentProfile from './app/profile/student_profile';
+import MyLearningsPage from './app/my-learning/page';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/forgot-password" element={<ForgotPage /> } />
         <Route path="/course" element={<Course />} />
         <Route path="/student-profile" element={<StudentProfile />} />
+        <Route path="/my-learning" element={<MyLearningsPage />} />
       </Routes>
     </BrowserRouter>
   );
