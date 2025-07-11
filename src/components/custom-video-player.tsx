@@ -12,7 +12,7 @@ interface CustomVideoPlayerProps {
   className?: string
 }
 
-export function CustomVideoPlayer({ src, poster, title, className = "" }: CustomVideoPlayerProps) {
+export function CustomVideoPlayer({ src, poster, className = "" }: CustomVideoPlayerProps) {
   const videoRef = useRef<HTMLVideoElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
   
