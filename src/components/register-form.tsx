@@ -25,6 +25,10 @@ export function RegisterForm({
             </p>
       </div>
       <div className="grid gap-6">
+        <div className="grid gap-3">
+          <Label htmlFor="fullname">Full Name</Label>
+          <Input id="fullname" type="text" placeholder="Juan Dela Cruz" required />
+        </div>
          <div className="grid gap-3">
           <Label htmlFor="username">Username</Label>
           <Input id="username" type="text" placeholder="Doe223" required />
